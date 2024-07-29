@@ -14,7 +14,7 @@ spec:
     spec:
       containers:
         - name: customer-container
-          image: studioghibli06/cust:14 # Update with your Docker Hub image
+          image: binupaatu/cust:14 # Update with your Docker Hub image
           ports:
             - containerPort: 8882
           env:
