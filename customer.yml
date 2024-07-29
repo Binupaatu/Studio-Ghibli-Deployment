@@ -1,20 +1,20 @@
 apiVersion: apps/v1
 kind: Deployment
 metadata:
-  name: course-deployment
+  name: customer-deployment
 spec:
   replicas: 1
   selector:
     matchLabels:
-      app: course
+      app: customer
   template:
     metadata:
       labels:
-        app: course
+        app: customer
     spec:
       containers:
-        - name: course-container
-          image: binupaatu/courses:12
+        - name: customer-container
+          image: binupaatu/customer:12
           ports:
             - containerPort: 8888
           env:
