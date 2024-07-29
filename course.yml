@@ -14,7 +14,7 @@ spec:
     spec:
       containers:
         - name: course-container
-          image: studioghibli06/courses:25
+          image: binupaatu/courses:25
           ports:
             - containerPort: 8888
           env:
