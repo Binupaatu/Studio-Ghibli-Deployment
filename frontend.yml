@@ -14,6 +14,6 @@ spec:
     spec:
       containers:
         - name: frontend-container
-          image: binupaatu/frontend:34
+          image: binupaatu/frontend:35
           ports:
             - containerPort: 80
