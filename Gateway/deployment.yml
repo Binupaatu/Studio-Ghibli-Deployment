@@ -14,7 +14,7 @@ spec:
     spec:
       containers:
         - name: gateway-container
-          image: binupaatu/gateway:18
+          image: binupaatu/backend-gateway:18
           ports:
             - containerPort: 8880
           env:
