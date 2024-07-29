@@ -14,12 +14,12 @@ spec:
     spec:
       containers:
         - name: customer-container
-          image: binupaatu/customer:12
+          image: studioghibli06/cust:14 # Update with your Docker Hub image
           ports:
-            - containerPort: 8888
+            - containerPort: 8882
           env:
             - name: MYSQL_HOST
-              value: mysql   # MySQL service name within the Kubernetes cluster
+              value: mysql-service   # MySQL service name within the Kubernetes cluster
             - name: MYSQL_PORT
               value: "3306"  # Default MySQL port
             - name: MYSQL_PASSWORD
