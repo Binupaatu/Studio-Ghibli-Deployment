@@ -1,25 +1,25 @@
 apiVersion: apps/v1
 kind: Deployment
 metadata:
-  name: customer-deployment
+  name: course-deployment
 spec:
   replicas: 1
   selector:
     matchLabels:
-      app: customer
+      app: course
   template:
     metadata:
       labels:
-        app: customer
+        app: course
     spec:
       containers:
-        - name: customer-container
-          image: binupaatu/cust:14 # Update with your Docker Hub image
+        - name: course-container
+          image: binupaatu/courses:12
           ports:
-            - containerPort: 8882
+            - containerPort: 8888
           env:
             - name: MYSQL_HOST
-              value: mysql-service   # MySQL service name within the Kubernetes cluster
+              value: mysql   # MySQL service name within the Kubernetes cluster
             - name: MYSQL_PORT
               value: "3306"  # Default MySQL port
             - name: MYSQL_PASSWORD
