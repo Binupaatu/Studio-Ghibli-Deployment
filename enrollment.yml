@@ -14,7 +14,7 @@ spec:
     spec:
       containers:
         - name: enrollment-container
-          image: binupaatu/enrollment:15  # Update with your Docker Hub image
+          image: binupaatu/enrollment:10
           ports:
             - containerPort: 8883
           env:
