@@ -19,7 +19,7 @@ spec:
             - containerPort: 8881
           env:
             - name: MYSQL_HOST
-              value: mysql-service   # MySQL service name within the Kubernetes cluster
+              value: mysql   # MySQL service name within the Kubernetes cluster
             - name: MYSQL_PORT
               value: "3306"  # Default MySQL port
             - name: MYSQL_PASSWORD
