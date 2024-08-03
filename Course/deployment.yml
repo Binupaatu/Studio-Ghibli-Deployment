@@ -16,7 +16,7 @@ spec:
         - name: course-container
           image: binupaatu/backend-courses:21
           ports:
-            - containerPort: 8888
+            - containerPort: 8885
           env:
             - name: MYSQL_HOST
               value: mysql   # MySQL service name within the Kubernetes cluster
