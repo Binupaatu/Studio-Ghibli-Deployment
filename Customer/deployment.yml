@@ -14,7 +14,7 @@ spec:
     spec:
       containers:
         - name: customer-container
-          image: binupaatu/backend-customers:16
+          image: binupaatu/backend-customers:17
           ports:
             - containerPort: 8882
           env:
