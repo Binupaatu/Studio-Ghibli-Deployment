@@ -14,7 +14,7 @@ spec:
     spec:
       containers:
         - name: course-container
-          image: binupaatu/backend-courses:26
+          image: binupaatu/backend-courses:27
           ports:
             - containerPort: 8885
           env:
