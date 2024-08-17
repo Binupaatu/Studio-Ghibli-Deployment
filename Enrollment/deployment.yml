@@ -14,7 +14,7 @@ spec:
     spec:
       containers:
         - name: enrollment-container
-          image: binupaatu/backend-enrollment:14
+          image: binupaatu/backend-enrollment:15
           ports:
             - containerPort: 8883
           env:
