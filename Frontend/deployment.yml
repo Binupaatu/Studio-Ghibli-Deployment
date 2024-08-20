@@ -14,6 +14,6 @@ spec:
     spec:
       containers:
         - name: frontend-container
-          image: binupaatu/frontend-studio-ghibli:80
+          image: binupaatu/frontend-studio-ghibli:82
           ports:
             - containerPort: 80
