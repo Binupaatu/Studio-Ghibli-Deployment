@@ -14,7 +14,7 @@ spec:
     spec:
       containers:
         - name: user-container
-          image: binupaatu/backend-users:30
+          image: binupaatu/backend-users:31
           ports:
             - containerPort: 8881
           env:
