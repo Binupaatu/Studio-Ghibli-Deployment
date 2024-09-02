@@ -1,8 +1,30 @@
+apiVersion: v1
+kind: Service
+metadata:
+  name: kibana
+  namespace: monitoring
+  labels:
+    app: kibana
+spec:
+  ports:
+    - port: 5601
+      targetPort: 5601
+      name: http
+  selector:
+    app: kibana
+  type: NodePort
+  ports:
+  - port: 5601
+    targetPort: 5601
+    nodePort: 30080  # Change this port if needed
+---
 apiVersion: apps/v1
 kind: Deployment
 metadata:
   name: kibana
-  namespace: observability
+  namespace: monitoring
+  labels:
+    app: kibana
 spec:
   replicas: 1
   selector:
@@ -15,6 +37,9 @@ spec:
     spec:
       containers:
       - name: kibana
-        image: docker.elastic.co/kibana/kibana:7.14.0
+        image: docker.elastic.co/kibana/kibana:7.15.0
         ports:
         - containerPort: 5601
+        env:
+        - name: ELASTICSEARCH_HOSTS
+          value: "http://elasticsearch.monitoring.svc.cluster.local:9200"
