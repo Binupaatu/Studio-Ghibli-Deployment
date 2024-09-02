@@ -23,6 +23,10 @@ spec:
   - port: 4318
     name: otlp-http
     targetPort: 4318
+  - name: query-http
+    port: 16686
+    targetPort: 16686
+    protocol: TCP
   selector:
     app: jaeger
   type: ClusterIP
