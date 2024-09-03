@@ -31,8 +31,8 @@ spec:
           volumeMounts:
             - name: logs-volume
               mountPath: /usr/src/app/logs  # This is where Winston writes the logs
-      volumes:
-        - name: logs-volume
-          hostPath:
-            path: /var/log/customer-service  # This is where the logs will be stored on the host
-            type: DirectoryOrCreate
+          volumes:
+            - name: logs-volume
+              hostPath:
+                path: /var/log/customer-service  # This is where the logs will be stored on the host
+                type: DirectoryOrCreate
