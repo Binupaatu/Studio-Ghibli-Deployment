@@ -2,7 +2,6 @@ apiVersion: apps/v1
 kind: Deployment
 metadata:
   name: customer-deployment
-  namespace: monitoring   # Optional: Specify the namespace
 spec:
   replicas: 1
   selector:
@@ -28,4 +27,3 @@ spec:
                 secretKeyRef:
                   name: mysql-secret
                   key: password
-          
